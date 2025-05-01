@@ -25,12 +25,22 @@ SECRET_KEY = 'django-insecure-w9q@_cm&ta)b4we2@ccwba&qtx9e2iwc5@=3=yg*1!zh(crah7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Host/domain names that this Django site can serve
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # CSRF Settings
-CSRF_TRUSTED_ORIGINS = ['https://localhost:8000', 'http://localhost:8000', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'https://127.0.0.1:8000'
+]
+
+# Security Settings
 CSRF_COOKIE_SECURE = False  # Set to True in production with HTTPS
 CSRF_COOKIE_HTTPONLY = False  # Set to True in production
+CSRF_USE_SESSIONS = False  # Set to True in production
+CSRF_COOKIE_DOMAIN = None  # Set to your domain in production
 
 # Application definition
 
