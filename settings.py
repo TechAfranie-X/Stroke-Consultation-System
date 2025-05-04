@@ -27,12 +27,12 @@ SECRET_KEY = 'django-insecure-w9q@_cm&ta)b4we2@ccwba&qtx9e2iwc5@=3=yg*1!zh(crah7
 DEBUG = False
 
 # Host/domain names that this Django site can serve
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','Stroke-2.onrender.com']
 
 # CSRF Settings
 CSRF_TRUSTED_ORIGINS = [
-    'https://.onrender.com',
-    'https://.onrender.com',
+    'https://Stroke-2.onrender.com',
+    'https://Stroke-2.onrender.com',
     'http://localhost:8000',
     'http://127.0.0.1:8000'
     
