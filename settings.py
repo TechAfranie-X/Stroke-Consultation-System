@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,14 +27,15 @@ SECRET_KEY = 'django-insecure-w9q@_cm&ta)b4we2@ccwba&qtx9e2iwc5@=3=yg*1!zh(crah7
 DEBUG = False
 
 # Host/domain names that this Django site can serve
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','.onrender.com']
 
 # CSRF Settings
 CSRF_TRUSTED_ORIGINS = [
-    'https://localhost:8000',
+    'https://.onrender.com',
+    'https://.onrender.com',
     'http://localhost:8000',
-    'http://127.0.0.1:8000',
-    'https://127.0.0.1:8000'
+    'http://127.0.0.1:8000'
+    
 ]
 
 # Security Settings
@@ -134,10 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATICFILES_DIRS = [ os.path.join(BASE_DIR , 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles', 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
